@@ -203,35 +203,35 @@ function setup() {
     Composite.clear(world, false); // Clear existing bodies from the world
     bodies = []; // Reset bodies array
 
-    loadedImages.forEach((img, i) => {
-        const scale = 0.39;
-        const width = img.naturalWidth * scale;
-        const height = img.naturalHeight * scale;
+loadedImages.forEach((img, i) => {
+    const scale = 0.39;
+    const width = img.naturalWidth * scale;
+    const height = img.naturalHeight * scale;
 
-        // Position items randomly across the entire canvas for chaos mode
-        const x = 100 + Math.random() * (canvasWidth - 200);
-        const y = 100 + Math.random() * (canvasHeight - 400);
+    const x = 100 + Math.random() * (canvasWidth - 200);
+    const y = 100 + Math.random() * (canvasHeight - 400);
 
-        const src = images[i];
-        const category = imageCategories[src] || 'uncategorized';
+    const src = images[i];
+    const category = imageCategories[src] || 'uncategorized';
+    const textObjectForImage = imageTextData[i] || { number: '?', description: 'No description' };
 
-        const textObjectForImage = imageTextData[i] || { number: '?', description: 'No description' };
-
-        const body = Bodies.rectangle(x, y, width, height, {
-            label: `img${i}`,
-            restitution: restitution,
-            frictionAir: frictionAir
-        });
-
-        body.renderImg = {
-            width,
-            height,
-            category,
-            number: textObjectForImage.number,
-            description: textObjectForImage.description
-        };
-        bodies.push(body);
+    const body = Bodies.rectangle(x, y, width, height, {
+        label: `img${i}`,
+        restitution: restitution,
+        frictionAir: frictionAir
     });
+
+    body.renderImg = {
+        width,
+        height,
+        category,
+        number: textObjectForImage.number,
+        description: textObjectForImage.description
+    };
+
+    bodies.push(body);
+    World.add(world, body); // ← This line is essential
+});
 
     Composite.add(world, bodies); // Add all created bodies to the physics world
 
