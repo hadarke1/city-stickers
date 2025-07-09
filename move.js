@@ -40,11 +40,10 @@ let bodies = []; // Array to hold Matter.js bodies for your images
 // --- Image Assets ---
 const images = [
     'png/1.png', 'png/2.png', 'png/3.png', 'png/4.png', 'png/44.png', 'png/55.png',
-    'png/afa.png', 'png/g.png', 'png/h.png',
-    'png/layer 1.png', 'png/layer 2.png', 'png/layer 3.png', 'png/layer 4.png', 'png/layer 5.png',
-    'png/layer 6.png', 'png/layer 7.png', 'png/layer 9.png', 'png/layer 10.png',
-    'png/layer 11.png', 'png/layer 12.png', 'png/layer 13.png', 'png/layer 14.png', 'png/layer 15.png',
-    'png/layer 16.png', 'png/layer 17.png', 'png/usm.png', 'png/veld.png',
+    'png/afa.png', 'png/g.png', 'png/h.png', 'png/Layer 1.png', 'png/Layer 2.png', 'png/Layer 3.png', 'png/Layer 4.png', 'png/Layer 5.png',
+    'png/Layer 6.png', 'png/Layer 7.png', 'png/Layer 9.png', 'png/Layer 10.png',
+    'png/Layer 11.png', 'png/Layer 12.png', 'png/Layer 13.png', 'png/Layer 14.png', 'png/Layer 15.png',
+    'png/Layer 16.png', 'png/Layer 17.png', 'png/usm.png', 'png/veld.png',
     'png/u1.png', 'png/u2.png', 'png/u3.png', 'png/u4.png', 'png/u5.png', 'png/u7.png', 'png/u8.png', 'png/u9.png',
     'png/i1.png', 'png/i2.png', 'png/i4.png', 'png/i5.png', 'png/i6.png', 'png/y1.png',
     'png/y2.png', 'png/y3.png', 'png/y4.png', 'png/y6.png', 'png/y5.png', 'png/y7.png', 'png/y8.png', 'png/j.png', 'png/h1.png', 'png/h2.png',
