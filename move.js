@@ -48,7 +48,7 @@ const images = [
     'png/u1.png', 'png/u2.png', 'png/u3.png', 'png/u4.png', 'png/u5.png', 'png/u7.png', 'png/u8.png', 'png/u9.png',
     'png/i1.png', 'png/i2.png', 'png/i4.png', 'png/i5.png', 'png/i6.png', 'png/y1.png',
     'png/y2.png', 'png/y3.png', 'png/y4.png', 'png/y6.png', 'png/y5.png', 'png/y7.png', 'png/y8.png', 'png/j.png', 'png/h1.png', 'png/h2.png',
-    'png/h3.png', 'png/h4.png', 'png/h5.png', 'png/h6.png', 'png/h7.png', 'png/h8.png', 'png/layer 18.png', 'png/layer 19.png',
+    'png/h3.png', 'png/h4.png', 'png/h5.png', 'png/h6.png', 'png/h7.png', 'png/h8.png', 'png/Layer 18.png', 'png/Layer 19.png',
     'png/Layer 20.png', 'png/Layer 21.png', 'png/Layer 22.png', 'png/Layer 23.png', 'png/Layer 24.png', 'png/Layer 25.png',
     'png/q1.png', 'png/q2.png', 'png/q3.png', 'png/q4.png', 'png/q5.png', 'png/q6.png', 'png/q7.png', 'png/q8.png', 'png/q9.png', 'png/q10.png', 'png/q11.png', 'png/q12.png',
     'png/q13.png', 'png/q14.png', 'png/q15.png', 'png/q16.png', 'png/q17.png', 'png/q18.png', 'png/q19.png', 'png/q20.png', 'png/q21.png', 'png/q22.png', 'png/q23.png', 'png/q24.png', 'png/q25.png', 'png/q26.png',
