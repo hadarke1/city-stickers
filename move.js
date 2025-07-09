@@ -389,25 +389,29 @@ function handleOrientation(event) {
 
 // --- Grid Position Calculation (with "Imperfection") ---
 function calculateGridPositions() {
-    const horizontalSpacing = 150; // Horizontal spacing between items
-    const verticalSpacing = 250; // Vertical spacing between items
-    const itemSize = 100; // Conceptual item size for layout calculations
+    // Adjust spacing and item size based on screen width
+    const screenWidth = window.innerWidth;
+    let horizontalSpacing, verticalSpacing, itemSize;
 
-    const cols = Math.floor((canvas.width - horizontalSpacing) / (itemSize + horizontalSpacing));
-    if (cols < 1) { // Fallback for very narrow screens
-        console.warn("Not enough width for columns, defaulting to 1 column.");
-        const positions = [];
-        for (let i = 0; i < bodies.length; i++) {
-            positions.push({ x: canvas.width / 2, y: 100 + i * (itemSize + verticalSpacing) });
-        }
-        return positions;
+    if (screenWidth < 600) { // Mobile devices
+        horizontalSpacing = 50;
+        verticalSpacing = 100;
+        itemSize = 50;
+    } else if (screenWidth < 1024) { // Tablets
+        horizontalSpacing = 100;
+        verticalSpacing = 150;
+        itemSize = 75;
+    } else { // Desktops
+        horizontalSpacing = 150;
+        verticalSpacing = 250;
+        itemSize = 100;
     }
 
+    const cols = Math.floor((canvas.width - horizontalSpacing) / (itemSize + horizontalSpacing));
     const positions = [];
     const gridContentWidth = cols * (itemSize + horizontalSpacing) - horizontalSpacing;
-    const initialXOffset = (canvas.width - gridContentWidth) / 2.4; // Adjust for horizontal centering
-
-    const initialYOffset = 150; // Starting Y position for the first row
+    const initialXOffset = (canvas.width - gridContentWidth) / 2.4;
+    const initialYOffset = 150;
 
     for (let i = 0; i < bodies.length; i++) {
         const col = i % cols;
