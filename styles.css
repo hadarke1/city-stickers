@@ -132,6 +132,8 @@ html, body {
     width: 100%; 
     height: 100%; 
     z-index: 10;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #organizeButton{
@@ -186,6 +188,3 @@ canvas {
   display: block;
 } */
 
-#world{
-  overflow: scroll;
-}
