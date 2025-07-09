@@ -226,7 +226,9 @@ loadedImages.forEach((img, i) => {
         height,
         category,
         number: textObjectForImage.number,
-        description: textObjectForImage.description
+        description: textObjectForImage.description,
+        image: img
+        
     };
 
     bodies.push(body);
@@ -292,7 +294,7 @@ function render() {
 
     for (let i = 0; i < bodies.length; i++) {
         const body = bodies[i];
-        const img = loadedImages[i];
+        const img = body.renderImg.image;;
         const size = body.renderImg; // Contains width, height, category, number, description
 
         // Only draw if image is loaded and not hidden by filter
