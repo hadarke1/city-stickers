@@ -230,7 +230,6 @@ loadedImages.forEach((img, i) => {
     };
 
     bodies.push(body);
-    World.add(world, body); // ← This line is essential
 });
 
     Composite.add(world, bodies); // Add all created bodies to the physics world
